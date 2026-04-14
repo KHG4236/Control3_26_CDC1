@@ -1,7 +1,7 @@
 package is.c3.controller;
 
-import is.c3.entities.Biblioteca;
-import is.c3.entities.LibroFisico;
+import is.c3.model.entities.Biblioteca;
+import is.c3.model.entities.LibroFisico;
 
 
 public class Bibliotecario {

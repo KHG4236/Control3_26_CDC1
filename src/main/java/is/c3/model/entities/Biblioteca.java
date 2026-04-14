@@ -1,4 +1,4 @@
-package is.c3.entities;
+package is.c3.model.entities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Biblioteca implements GestionProductos<Libro> {
 
 	@Override
 	public void save(Libro libro) {
-		log.fine("libro añadido");	
+		log.fine("libro añadido");
 	}
 
 	@Override

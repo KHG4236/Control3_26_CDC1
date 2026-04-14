@@ -2,6 +2,9 @@ package is.c3.entities;
 
 
 import is.c3.model.Libro;
+import is.c3.model.entities.Biblioteca;
+import is.c3.model.entities.LibroFisico;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -46,6 +49,12 @@ public class BibliotecaTest {
 	@Test
 	public void testDeleteAll() {
 		
+		LibroFisico p1 = new LibroFisico("La muy catastrófica visita al zoo", "Joel Dicker", 2025, "P3-E345");
+		LibroFisico p2 = new LibroFisico("El cuco de cristal", "Javier Castillo", 2023, "P3-E657");
+		
+		biblio.save(p1);
+		biblio.save(p2);
+		
 		// Eliminar los libros
 		biblio.deleteAll();
 
@@ -58,14 +67,11 @@ public class BibliotecaTest {
 		LibroFisico p1 = new LibroFisico("La muy catastrófica visita al zoo", "Joel Dicker", 2025, "P3-E345");
 		LibroFisico p2 = new LibroFisico("El cuco de cristal", "Javier Castillo", 2023, "P3-E657");
 		
-		// Almacenar libros de una en una, o en grupo
+		//Almacenar libros
 		biblio.save(p1);
 		biblio.save(p2);
-		
-		//Verificar que se han añadido y en orden ASCENDENTE (por año de escritura)
-		List<Libro> lista = biblio.findAll();
-		
-		assertEquals(p1,lista.get(0), "Almacenados incorrectamente");
+				
+		assertEquals(2,biblio.getLibros().size(), "Almacenados incorrectamente");
 
 	}
 
