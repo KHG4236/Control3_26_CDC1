@@ -35,7 +35,7 @@ public class Bibliotecario {
 		
 	}
     private void printData() {
-    	System.out.println("Libros en la biblioteca");
+    	System.out.println("Libros en la biblioteca de KHG4236");
 		// Mostrar todos los libros
 		System.out.println(biblio.findAll());
     	

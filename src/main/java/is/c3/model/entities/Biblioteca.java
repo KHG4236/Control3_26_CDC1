@@ -38,6 +38,7 @@ public class Biblioteca implements GestionProductos<Libro> {
 
 	@Override
 	public void save(Libro libro) {
+		libros.add(libro);
 		log.fine("libro añadido");
 	}
 
